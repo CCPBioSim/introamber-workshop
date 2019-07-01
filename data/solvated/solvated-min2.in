@@ -1,0 +1,8 @@
+minimize structure
+&cntrl
+  imin=1, ! perform energy minimization
+  maxcyc=1000, ! number of minimization steps
+  cut=12.0, ! non-bond cutoff (Angstroms)
+  ntpr=10, ! frequency for writing mdout and mdinfo
+  ntx=1, ! coordinates read in
+/

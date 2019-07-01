@@ -1,0 +1,21 @@
+run restrained MD at 300K
+&cntrl
+  ntc=2, ! shake constraints, bonds with H constrained
+  ntf=2, ! typically ntf = ntc
+  cut=12.0, ! non-bond cutoff (Angstroms)
+  igb=1, ! generalized Born model
+  gbsa=1, ! surface area using LCPO model
+  saltcon=0.1, ! salt concentration (M), Debye-Huckel screening
+  ntpr=500, ! frequency of writing to mdout/mdinfo
+  ntwx=500, ! frequency of writing to mdcrd
+  nstlim=5000, ! number of MD steps
+  dt=0.002, ! time step (ps)
+  ntt=1, ! temperature coupling, weak-coupling algorithm
+  temp0=300.0, ! reference temperature
+  ntx=5,  ! coordinates and velocities read in
+  irest=1, ! restart = coordinates and velocities from input file
+  nscm=1000, ! removal of translational and rotational center of mass
+  ntr=1, ! using restraints
+  restraint_wt=1.0, ! weight for the positional restraints (kcal/mol-A^2)
+  restraintmask=':1-5' ! string which specifies which atoms are restrained
+/

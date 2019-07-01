@@ -1,0 +1,18 @@
+heating with restraints
+&cntrl
+  ntc=2, ! shake constraints, bonds with H constrained
+  ntf=2, ! typically ntf = ntc
+  cut=10.0, ! non-bond cutoff (Angstroms)
+  nstlim=5000000, ! number of MD steps
+  dt=0.002, ! time step (ps)
+  ntt=1, ! temperature coupling, weak-coupling algorithm
+  tempi=0.0, ! initial temperature
+  temp0=300.0, ! reference temperature
+  ntx=1, ! coordinates read in
+  irest=0, ! no restart, amber sets velocities
+  ntp=0, ! no pressure scaling
+  nscm=1000, ! removal of translational and rotational center of mass
+  ntr=1, ! using restraints
+  restraint_wt=1.0, ! weight for the positional restraints (kcal/mol-A^2)
+  restraintmask=':1-5' ! string which specifies which atoms are restrained
+/

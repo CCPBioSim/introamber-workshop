@@ -1,0 +1,14 @@
+minimize structure
+&cntrl
+  imin=1, ! perform energy minimization
+  maxcyc=1000, ! number of minimization steps
+  cut=12.0, ! non-bond cutoff (Angstroms)
+  igb=1, ! generalized Born model
+  gbsa=1, ! surface area using LCPO model
+  saltcon=0.1, ! salt concentration (M), Debye-Huckel screening
+  ntpr=10, ! frequency for writing mdout and mdinfo
+  ntx=1, ! coordinates read in
+  ntr=1, ! using restraints
+  restraint_wt=5.0, ! weight for the positional restraints (kcal/mol-A^2)
+  restraintmask=':1-5' ! string which specifies which atoms are restrained
+/
