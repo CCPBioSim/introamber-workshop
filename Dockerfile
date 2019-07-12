@@ -81,10 +81,9 @@ RUN jupyter-nbextension install nglview --py --sys-prefix && \
     jupyter-nbextension enable fileupload --py --sys-prefix
 
 # Add all of the workshop files to the home directory
-RUN git clone https://github.com/CCPBioSim/intro_amber_workshop.git
-RUN mv intro_amber_workshop/* . && \
-    rm -r LICENSE README.md intro_amber_workshop
-   # rm -r AUTHORS LICENSE README.md _config.yml intro_amber_workshop
+RUN git clone https://github.com/CCPBioSim/introamber-workshop.git
+RUN mv introamber-workshop/* . && \
+    rm -r Dockerfile LICENSE README.md introamber-workshop
 
 # UNCOMMENT THIS LINE FOR REMOTE DEPLOYMENT
 #COPY jupyter_notebook_config.py /etc/jupyter/
